@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Result<Value> {
+public enum Result<Value: Equatable> {
 
     case success(value: Value)
     case failure(Error)
@@ -17,14 +17,14 @@ enum Result<Value> {
 
 
 //MARK:- Functor
-extension Result {
+public extension Result {
 
     /**
      Result (as Functor) provides mapping ability to the internal elements.
      - parameter transform: Transformation (mapping) that will be applied to internal item if it is `.success`
      - returns: Mapped value is wrapped in Result. If the internal item representes `failure` case then that same `failure` is returned without any transformation.
      */
-    func fmap<T>(_ transform: (Value) -> T) -> Result<T> {
+    public func fmap<T>(_ transform: (Value) -> T) -> Result<T> {
         switch self {
         case let .success(v):
             let transformed = transform(v)
@@ -40,7 +40,7 @@ extension Result {
 
 
 //MARK:- Monad
-extension Result {
+public extension Result {
 
     /**
      Result (as Monad) provides composing ability to Result types without the need to
@@ -49,7 +49,7 @@ extension Result {
      - parameter toTransform: a function that will take the internal value of the current Result type and compute.
      - returns: new Result type
      */
-    func bind<T>(_ toTransform: (Value) -> Result<T>) -> Result<T> {
+    public func bind<T>(_ toTransform: (Value) -> Result<T>) -> Result<T> {
         let mapped = self.fmap(toTransform)
         return Result.flatten(mapped)
     }
