@@ -1,0 +1,10 @@
+framework module ResultType {
+  umbrella header "ResultType.h"
+
+  export *
+  module * { export * }
+}
+
+module ResultType.__Swift {
+    exclude header "ResultType-Swift.h"
+}

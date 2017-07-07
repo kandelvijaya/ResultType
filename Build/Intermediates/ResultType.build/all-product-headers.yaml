@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/vkandel/Desktop/Sharpen the Saw/ResultType/Build/Products/Debug-iphonesimulator/ResultType.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ResultType-Swift.h",
+          'external-contents': "/Users/vkandel/Desktop/Sharpen the Saw/ResultType/Build/Products/Debug-iphonesimulator/ResultType.framework/Headers/ResultType-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ResultType.h",
+          'external-contents': "/Users/vkandel/Desktop/Sharpen the Saw/ResultType/ResultType/ResultType.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/vkandel/Desktop/Sharpen the Saw/ResultType/Build/Products/Debug-iphonesimulator/ResultType.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/vkandel/Desktop/Sharpen the Saw/ResultType/Build/Intermediates/ResultType.build/Debug-iphonesimulator/ResultType.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
