@@ -11,7 +11,6 @@
 		284DE5EF1F10240900EC7377 /* ResultTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DE5EE1F10240900EC7377 /* ResultTypeTests.swift */; };
 		284DE5F11F10240900EC7377 /* ResultType.h in Headers */ = {isa = PBXBuildFile; fileRef = 284DE5E31F10240900EC7377 /* ResultType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		284DE5FB1F10241400EC7377 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DE5FA1F10241400EC7377 /* Result.swift */; };
-		284DE5FD1F10352C00EC7377 /* Result+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DE5FC1F10352C00EC7377 /* Result+Equatable.swift */; };
 		284DE5FF1F1169CD00EC7377 /* Result+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DE5FE1F1169CD00EC7377 /* Result+Operator.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		284DE5EE1F10240900EC7377 /* ResultTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTypeTests.swift; sourceTree = "<group>"; };
 		284DE5F01F10240900EC7377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		284DE5FA1F10241400EC7377 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		284DE5FC1F10352C00EC7377 /* Result+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Equatable.swift"; sourceTree = "<group>"; };
 		284DE5FE1F1169CD00EC7377 /* Result+Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Operator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 				284DE5E31F10240900EC7377 /* ResultType.h */,
 				284DE5E41F10240900EC7377 /* Info.plist */,
 				284DE5FA1F10241400EC7377 /* Result.swift */,
-				284DE5FC1F10352C00EC7377 /* Result+Equatable.swift */,
 				284DE5FE1F1169CD00EC7377 /* Result+Operator.swift */,
 			);
 			path = ResultType;
@@ -205,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				284DE5FB1F10241400EC7377 /* Result.swift in Sources */,
-				284DE5FD1F10352C00EC7377 /* Result+Equatable.swift in Sources */,
 				284DE5FF1F1169CD00EC7377 /* Result+Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Result<Value: Equatable> {
+public enum Result<Value> {
 
     case success(value: Value)
     case failure(Error)

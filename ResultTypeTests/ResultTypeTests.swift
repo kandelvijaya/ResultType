@@ -15,10 +15,12 @@ final class ResultTypeTests: XCTestCase {
 
     func testWhenFmapIsAppliedOnResultWithSuccessCase_thenSuccessValueIsMapped() {
         let givenResult = Result<Int>.lift(12)
-        let expected = Result<Int>.success(value: 24)
-
         let output = givenResult.fmap { $0 * 2 }
-        XCTAssertTrue(expected == output)
+
+        guard case let .success(v) = output, v == 24 else {
+            XCTFail()
+            return
+        }
     }
 
     func testWhenFmapIsAppliedOnResultWithFailureCase_thenOriginalResultIsUnchanged() {
@@ -41,10 +43,11 @@ final class ResultTypeTests: XCTestCase {
 
     func testWhenBindIsAppliedOnResultWithSuccessCase_thenSuccessValueIsBinded() {
         let givenResult = Result<Int>.lift(200)
-        let expected = Result<Int>.success(value: 2)
-
         let bindOutput = givenResult.bind(TestHelper.divideBy100)
-        XCTAssertTrue(bindOutput == expected)
+        guard case let .success(v) = bindOutput, v == 2 else {
+            XCTFail()
+            return
+        }
     }
 
     func testWhenBindIsAppliedOnResultWithSuccessCase_thenSuccessValueIsBindedAndReturnsTheOutputOfSecondFunction() {
