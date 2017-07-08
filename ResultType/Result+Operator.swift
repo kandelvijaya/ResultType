@@ -20,19 +20,17 @@ precedencegroup BindFunctionCompositionPrecedence {
 
 }
 
-/**
- `bind` can be convienienty accessed by substituting `>>=`
- This operator gives elagance to the code both in terms of
- readability to the reader and notion of chaining to the author.
- */
 infix operator >>=: BindFunctionCompositionPrecedence
 
 
 /**
- `>>=` is defined in terms of `bind`. It provides a concise and readable
+ `>>>` is defined in terms of `bind`. It provides a concise and readable
  syntax/operator for composing functions.
+
+ - important: This operator is defined in swift-core as `>>=` similar to `*=` or `+=`
+ This might not work well with the tests.
  */
-func >>= <T,U>(_ lhs: Result<T>, _ rhsFunction: ((T) -> Result<U>)) -> Result<U> {
+func >>= <T,U>(_ lhs: Result<T>, _ rhsFunction: (T) -> Result<U>) -> Result<U> {
     return lhs.bind(rhsFunction)
 }
 

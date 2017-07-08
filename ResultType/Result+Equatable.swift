@@ -21,3 +21,4 @@ extension Result: Equatable {
     }
 
 }
+
