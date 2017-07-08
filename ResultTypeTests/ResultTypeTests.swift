@@ -38,9 +38,6 @@ final class ResultTypeTests: XCTestCase {
 
 
     // MARK:- Monad tests
-    // IMPORTANT: Cannot test `>>=` becuase this operator is defined in the standard library
-    // similar to `+=`, `*=`.
-
     func testWhenBindIsAppliedOnResultWithSuccessCase_thenSuccessValueIsBinded() {
         let givenResult = Result<Int>.lift(200)
         let bindOutput = givenResult.bind(TestHelper.divideBy100)

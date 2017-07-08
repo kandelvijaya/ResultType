@@ -14,23 +14,23 @@ precedencegroup BindFunctionCompositionPrecedence {
     // BitwiseShiftPrecedence is higher than Multiplicative ones ( * ,  /)
     higherThan: BitwiseShiftPrecedence
 
-    // x >>= y >>= z
-    // is the same as (x >>= y) >>= z
+    // x >>=> y >>=> z
+    // is the same as (x >>=> y) >>=> z
     associativity: left
 
 }
 
-infix operator >>=: BindFunctionCompositionPrecedence
+infix operator >>=>: BindFunctionCompositionPrecedence
 
 
 /**
- `>>>` is defined in terms of `bind`. It provides a concise and readable
+ `>>=>` is defined in terms of `bind`. It provides a concise and readable
  syntax/operator for composing functions.
 
- - important: This operator is defined in swift-core as `>>=` similar to `*=` or `+=`
- This might not work well with the tests.
+ - important: Haskell uses `>>=` but unfortunately Swift Standard Library
+ defines `>>=` similar to `+=`, `*=`
  */
-func >>= <T,U>(_ lhs: Result<T>, _ rhsFunction: (T) -> Result<U>) -> Result<U> {
+public func >>=> <T,U>(_ lhs: Result<T>, _ rhsFunction: (T) -> Result<U>) -> Result<U> {
     return lhs.bind(rhsFunction)
 }
 
